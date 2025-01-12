@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Student Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles4.css">
+    <script src="script4.js" defer></script>
+</head>
+<body>
+<!-- Progress Bar -->
+<div class="progress-container">
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+</div>
+
+<header class="page-header">
+    <div class="header-content">
+        <h1>Student Registration Form</h1>
+        <p>Complete all fields to submit your application</p>
+    </div>
+</header>
+
+<main class="container">
+    <form id="registrationForm" class="registration-form">
+        <!-- Section 1: Personal Information -->
+        <section class="form-section" data-section="personal">
+            <h2>Personal Information</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName"
+                           class="form-control" data-validate="name"
+                           placeholder="Enter your first name">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="middleInitial">Middle Initial</label>
+                    <input type="text" id="middleInitial" name="middleInitial"
+                           class="form-control" maxlength="1"
+                           placeholder="M">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName"
+                           class="form-control" data-validate="name"
+                           placeholder="Enter your last name">
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Academic Information -->
+        <section class="form-section" data-section="academic">
+            <h2>Academic Information</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="matriculation">Matriculation Number</label>
+                    <input type="text" id="matriculation" name="matriculation"
+                           class="form-control" data-validate="numeric"
+                           placeholder="Enter your matriculation number">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                           class="form-control" data-validate="email"
+                           placeholder="your.email@example.com">
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Graduate Program</label>
+                    <select id="program" name="program" class="form-control" required>
+                        <option value="">Select a program</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="BD">Big Data</option>
+                        <option value="AI">Artificial Intelligence</option>
+                        <option value="DS">Data Science</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Location & Date -->
+        <section class="form-section" data-section="location">
+            <h2>Location & Start Date</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" class="form-control" required>
+                        <option value="">Select your country</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="startDate">Program Start Date</label>
+                    <input type="date" id="startDate" name="startDate"
+                           class="form-control" required>
+                    <span class="error-message"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Additional Information -->
+        <section class="form-section" data-section="additional">
+            <h2>Additional Information</h2>
+
+            <div class="radio-section">
+                <p class="radio-group-label">How did you hear about us?</p>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="source" value="media">
+                        <span class="radio-text">Media</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="source" value="advertisement">
+                        <span class="radio-text">Advertisement</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="source" value="agency">
+                        <span class="radio-text">Agency</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="source" value="other">
+                        <span class="radio-text">Other</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="radio-section">
+                <p class="radio-group-label">Future Plans</p>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="futurePlan" value="return">
+                        <span class="radio-text">Return to my country</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="futurePlan" value="work">
+                        <span class="radio-text">Find work in Europe</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="futurePlan" value="undecided">
+                        <span class="radio-text">Complete training and decide later</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Feedback -->
+        <section class="form-section" data-section="feedback">
+            <h2>Course Feedback</h2>
+            <div class="form-group">
+                <label for="feedback">Your thoughts about the course</label>
+                <textarea id="feedback" name="feedback" class="form-control"
+                          rows="5" placeholder="Share your experience and suggestions..."></textarea>
+                <span class="error-message"></span>
+            </div>
+        </section>
+
+        <!-- SDLC Methodology Section -->
+        <section class="form-section" data-section="sdlc">
+            <h2>SDLC Knowledge Assessment</h2>
+
+            <div class="info-links">
+                <p>Learn more about:
+                    <a href="sdlc.html" target="_blank">SDLC</a>,
+                    <a href="css.html" target="_blank">CSS</a>, and
+                    <a href="javascript.html" target="_blank">Javascript</a>
+                </p>
+            </div>
+
+            <!-- Section A -->
+            <div class="form-group">
+                <label for="sdlcMethodologies" class="required">A) SDLC Methodologies and Reasons</label>
+                <textarea
+                        id="sdlcMethodologies"
+                        name="sdlcMethodologies"
+                        class="form-control"
+                        rows="5"
+                        required
+                        placeholder="List and explain your suggested SDLC methodologies..."></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <!-- Section B -->
+            <div class="form-group">
+                <label for="agileMethodologies" class="required">B) Agile SDLC Methods Suggestions</label>
+                <textarea
+                        id="agileMethodologies"
+                        name="agileMethodologies"
+                        class="form-control"
+                        rows="5"
+                        required
+                        placeholder="List and explain your suggested Agile methodologies..."></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <!-- Section C -->
+            <div class="form-group">
+                <label for="srhLearning" class="required">C) SRH Software Development Learning</label>
+                <textarea
+                        id="srhLearning"
+                        name="srhLearning"
+                        class="form-control"
+                        rows="5"
+                        required
+                        placeholder="List what you learned in this course..."></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <!-- Section D -->
+            <div class="form-group">
+                <label class="required">D) CSS Implementation Methods</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="cssInline" name="cssMethods" value="inline">
+                        <label for="cssInline">Inline CSS</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="cssInternal" name="cssMethods" value="internal">
+                        <label for="cssInternal">Internal CSS</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="cssExternal" name="cssMethods" value="external">
+                        <label for="cssExternal">External CSS</label>
+                    </div>
+                </div>
+                <span class="error-message"></span>
+            </div>
+
+            <!-- Section E -->
+            <div class="form-group">
+                <label for="cssReasons" class="required">E) Reasons for Using CSS</label>
+                <textarea
+                        id="cssReasons"
+                        name="cssReasons"
+                        class="form-control"
+                        rows="4"
+                        required
+                        placeholder="Explain the reasons for using CSS..."></textarea>
+                <span class="error-message"></span>
+            </div>
+
+            <!-- Section F -->
+            <div class="form-group">
+                <label for="javascriptReasons" class="required">F) Reasons for Using JavaScript</label>
+                <textarea
+                        id="javascriptReasons"
+                        name="javascriptReasons"
+                        class="form-control"
+                        rows="4"
+                        required
+                        placeholder="Explain the reasons for using JavaScript..."></textarea>
+                <span class="error-message"></span>
+            </div>
+        </section>
+
+        <!-- Declaration -->
+        <fieldset>
+            <legend>Declaration</legend>
+            <div class="form-group">
+                <div class="checkbox-option">
+                    <input type="checkbox" id="declaration" name="declaration" required>
+                    <label for="declaration">I have Done this project myself and accept the consequences if found other ways</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">You can reach me at:</label>
+                <input
+                        type="email"
+                        id="contactEmail"
+                        name="contactEmail"
+                        required
+                        value="Akash.Takalikar@stud.srh-university.de"
+                        readonly
+                        class="form-control readonly-email">
+            </div>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="submit" class="submit-button">
+                <span class="button-text">Submit Application</span>
+                <span class="button-loader"></span>
+            </button>
+        </div>
+    </form>
+</main>
+
+<footer class="page-footer">
+    <p>&copy; 2025 SRH University. All rights reserved.</p>
+</footer>
+</body>
+</html>
