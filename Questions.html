@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDLC Methodologies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #2196F3;
+            --color-primary-dark: #1976D2;
+            --color-text: #333;
+            --color-background: #f5f5f5;
+            --color-border: #e0e0e0;
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .methodology {
+            margin-bottom: 2rem;
+        }
+
+        .methodology:last-child {
+            margin-bottom: 0;
+        }
+
+        .methodology h3 {
+            color: var(--color-primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .methodology-list {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+
+        .methodology-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .methodology-list li::before {
+            content: "•";
+            color: var(--color-primary);
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background: #333;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Software Development Life Cycle (SDLC)</h1>
+            <p>Understanding Different SDLC Methodologies and Approaches</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h3 class="section-title">Popular SDLC Methodologies</h3>
+            <div class="methodology">
+                <h3>Recommended Approaches</h3>
+                <p>Based on project requirements and team structure, the following methodologies are recommended:</p>
+                <ul class="methodology-list">
+                    <li>Agile: Ideal for projects requiring flexibility and rapid adaptation</li>
+                    <li>Waterfall: Best suited for structured projects with clear, fixed requirements</li>
+                    <li>DevOps: Perfect for continuous integration and delivery needs</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Agile Classification Methods</h2>
+            <div class="methodology">
+                <ul class="methodology-list">
+                    <li>Scrum: Enables iterative development with regular feedback cycles</li>
+                    <li>Kanban: Focuses on visualizing tasks and improving workflow efficiency</li>
+                    <li>Waterfall: Suitable for projects with clear, unchanging requirements</li>
+                    <li>Lean: Emphasizes waste minimization and maximized value delivery</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">SRH Software Development Course Learnings</h2>
+            <div class="methodology">
+                <ul class="methodology-list">
+                    <li>SDLC: Organizing and Maintaining The Development Phases</li>
+                    <li>Frontend and Backend Development: Creation of interactive and functional web applications</li>
+                    <li>C Programming : Foundation for logic building and programming concepts</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">CSS Implementation</h2>
+            <div class="methodology">
+                <h3>CSS Integration Methods</h3>
+                <ul class="methodology-list">
+                    <li>Inline CSS: Direct styling within HTML tags</li>
+                    <li>Internal CSS: Styling within the head section using style tags</li>
+                    <li>External CSS: Separate stylesheet linked using link tags</li>
+                </ul>
+                <h3>Benefits of CSS</h3>
+                <ul class="methodology-list">
+                    <li>Enhanced visual design capabilities</li>
+                    <li>Consistent styling across pages</li>
+                    <li>Simplified maintenance and updates</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">JavaScript in Web Development</h2>
+            <div class="methodology">
+                <h3>Key Applications</h3>
+                <ul class="methodology-list">
+                    <li>Creating interactive elements for enhanced user experience</li>
+                    <li>User input validation</li>
+                    <li>Dynamic content updates without page reload</li>
+                    <li>Multimedia element control and manipulation</li>
+                    <li>Complex animation implementation</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SRH University. All rights reserved.</p>
+    </footer>
+</body>
+</html>
